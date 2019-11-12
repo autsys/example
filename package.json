@@ -25,6 +25,7 @@
   "author": "Autarky Systems",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
