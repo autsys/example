@@ -10,7 +10,7 @@ export default class QCard extends Component {
       <Card.Body>
         <Card.Title>Is this project ready to begin now?</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+          Something here maybe
         </Card.Text>
         <ButtonG />
       </Card.Body>

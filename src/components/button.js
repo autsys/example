@@ -35,8 +35,8 @@ export class ButtonG extends Component {
   render() {
     return(
       <div className="d-flex flex-column">
-        <ButtonGroup size="lg">
-          <Button>Yes</Button>
+        <ButtonGroup border='danger' bg='danger' size="lg">
+          <Button border='danger'>Yes</Button>
           <Button>No</Button>
           <Button>Skip</Button>
         </ButtonGroup>
