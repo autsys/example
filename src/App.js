@@ -5,12 +5,15 @@ import QCard from './components/card';
 import Logo from './components/logo';
 import Jumbo from './components/jumbo';
 
+//<Jumbo />
+//<Logo />
+
 class App extends Component {
   render() {
     return (
       <Fragment>
-        <Jumbo />
-        <Logo />
+        
+
         <QCard style={{position: 'absolute'}}/>
       </Fragment>
     );
