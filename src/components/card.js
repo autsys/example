@@ -11,6 +11,7 @@ export default class QCard extends Component {
             <Card.Title>Is this project ready to begin now?</Card.Title>
               <Card.Text>
                <Example />
+               <HookInputTest />
               </Card.Text>
             <ButtonG />
           </Card.Body>
@@ -23,6 +24,7 @@ function HookInputTest() {
   const [input, setInput] = useState('');
   return (
     <div>
+      <p>{input}</p>
       <button onClick={() => setInput('send to where?')}>
         Click me
       </button>
@@ -36,7 +38,7 @@ function Example() {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
+      <button onClick={() => setCount(count - 1)}>
         Click me
       </button>
     </div>
