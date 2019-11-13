@@ -1,20 +1,44 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Card from 'react-bootstrap/Card'
 import { ButtonG } from './button';
 
 export default class QCard extends Component {
   render() {
     return (
-      <Card style={{marginLeft: '10%', marginRight: '10%', marginTop: '20%'}}>
+      <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '20%'}}>
         <Card.Header>Question #1</Card.Header>
           <Card.Body>
             <Card.Title>Is this project ready to begin now?</Card.Title>
               <Card.Text>
-                Something here maybe
+               <Example />
               </Card.Text>
             <ButtonG />
           </Card.Body>
       </Card>
     );
   }
+}
+
+function HookInputTest() {
+  const [input, setInput] = useState('');
+  return (
+    <div>
+      <button onClick={() => setInput('')}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
 }
