@@ -23,7 +23,7 @@ function HookInputTest() {
   const [input, setInput] = useState('');
   return (
     <div>
-      <button onClick={() => setInput('')}>
+      <button onClick={() => setInput('send to where?')}>
         Click me
       </button>
     </div>
