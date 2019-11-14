@@ -8,9 +8,9 @@ export default function Jumbo() {
       <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '5%'}}>
         <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
           <h1>Welcome!</h1>
-          <p>
-            This is a simple questionare to help us, help you! It should take no longer than 2 minutes.
-          </p>
+            <p>
+              This is a simple questionare to help us, help you! It should take no longer than 2 minutes.
+            </p>
           <p>
             <Button 
             onClick={() => setShowComp(!showComp)}
