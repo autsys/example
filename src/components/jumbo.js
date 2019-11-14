@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 
-export default class Jumbo extends Component {
-  render() {
+export default function Jumbo() {
+  const [showComp, setShowComp] = useState(false);
     return(
       <div style={{display: 'flex', alignItems: 'center', marginTop: '5%'}}>
         <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
@@ -12,10 +12,12 @@ export default class Jumbo extends Component {
             This is a simple questionare to help us, help you! It should take no longer than 2 minutes.
           </p>
           <p>
-            <Button style={{width: 120}} variant="primary">Start</Button>
+            <Button 
+            onClick={() => setShowComp(!showComp)}
+            style={{width: 120}} 
+            variant="primary">Start</Button>
           </p>
         </Jumbotron>
       </div>
     )
   }
-}
