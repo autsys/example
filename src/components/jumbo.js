@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 export default function Jumbo() {
   const [showComp, setShowComp] = useState(false);
     return(
-      <div style={{display: 'flex', alignItems: 'center', marginTop: '5%'}}>
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '5%'}}>
         <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
           <h1>Welcome!</h1>
           <p>
