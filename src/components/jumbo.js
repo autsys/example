@@ -1,18 +1,23 @@
-import React, { Component } from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import React, { useState } from 'react';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Button from 'react-bootstrap/Button';
 
-export default class Jumbo extends Component {
-  render() {
+export default function Jumbo() {
+  const [showComp, setShowComp] = useState(false);
     return(
-      <Jumbotron style={{textAlign: 'center', backgroundColor:'white', alignSelf: 'center'}}>
-        <h1>Autarky Systems</h1>
+      <div style={{display: 'flex', alignItems: 'center', marginTop: '5%'}}>
+        <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
+          <h1>Welcome!</h1>
           <p>
-            Thanks for taking time to help us, help you!
+            This is a simple questionare to help us, help you! It should take no longer than 2 minutes.
           </p>
           <p>
-            Click HERE to get started.
+            <Button 
+            onClick={() => setShowComp(!showComp)}
+            style={{width: 120}} 
+            variant="primary">Start</Button>
           </p>
-      </Jumbotron>
+        </Jumbotron>
+      </div>
     )
   }
-}

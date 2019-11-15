@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
-import Image from 'react-bootstrap/Image'
+import React from 'react';
 
-
-export default class Logo extends Component {
-  render() {
-    return(
-          <Image 
-            //style={{position: 'absolute'}}
-            src="../image/AS_Logo.png" 
-            fluid 
-          />
-    )
-  }
-}
+export default function Logo() {
+  return(
+    <img 
+      style={{width: 100, height: 100, marginLeft: '2%', marginTop: '1%'}} 
+      src={require('../image/AS_Logo.png')}
+      alt="description of image"
+    />
+  )
+};
