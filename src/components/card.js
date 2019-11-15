@@ -1,9 +1,18 @@
 import React, { Component, useState } from 'react';
 import Card from 'react-bootstrap/Card'
 import { ButtonG } from './button';
+import useCustom from '../hooks/globalHook';
 
-export default class QCard extends Component {
-  render() {
+
+const Qcard = () => {
+  
+  const [globalState, setGlobalState] = useCustom();
+
+  const add1Global = () => {
+    const newCounterValue = globalState.counter + 1;
+    setGlobalState({ counter: newCounterValue });
+  };
+
     return (
       <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '20%'}}>
         <Card.Header>Question #1</Card.Header>
@@ -16,29 +25,5 @@ export default class QCard extends Component {
       </Card>
     );
   }
-}
 
-function HookInputTest() {
-  const [input, setInput] = useState('');
-  return (
-    <div>
-      <p>{input}</p>
-      <button onClick={() => setInput('send to where?')}>
-        Click me
-      </button>
-    </div>
-  );
-}
-
-function Example() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count - 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
+export default Qcard
