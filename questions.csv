@@ -1,0 +1,13 @@
+Question,Type
+Is this project ready to begin now?,bool
+Do you have a UI design?,bool
+Do you have a logo?,bool
+Do you have a color scheme?,bool
+Do you have a domail?,string
+"Do you have a hosting solution? )goDadday, SquarSpace), The cloud)",bool
+Have you alreaday started programming?,bool
+"Do you want 3rd party connections? (Google, Auth, forkyou)",string
+"Do you have a defined software stack? (MERN, MEAN, LAMP, etc...)",array
+Does this project involve users? (People connecting/using the application),bool
+What do you want the project to accomplish?,string
+What features do you want the website/web app to have?,string

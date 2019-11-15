@@ -10,7 +10,8 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "csv": "csvtojson ./questions.csv > ./questions.json"
   },
   "repository": {
     "type": "git",
@@ -40,5 +41,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "csvtojson": "^2.0.10"
+  }
 }
