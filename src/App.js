@@ -4,6 +4,7 @@ import Logo from './components/logo';
 import Jumbo from './components/jumbo';
 import List from './components/list';
 import Qcard from './components/card';
+import ExampleHook from './components/exampleHook'
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <Fragment>
         <Logo />
         <Jumbo />
+        <Qcard />
       </Fragment>
     );
   }

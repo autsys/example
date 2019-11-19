@@ -1,26 +1,38 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card'
-import { ButtonG } from './button';
-import useCustom from '../hooks/globalHook';
+import globalHook from 'use-global-hook';
+import questions from '../questions.json'
+import { Button, ButtonGroup } from 'react-bootstrap';
 
-
+const initialState = {
+  counter: 0,
+};
+ 
+const actions = {
+  addToCounter: (store, amount) => {
+    const newCounterValue = store.state.counter + amount;
+    store.setState({ counter: newCounterValue });
+  },
+};
+ 
+const useGlobal = globalHook(React, initialState, actions);
+ 
 const Qcard = () => {
-  
-  const [globalState, setGlobalState] = useCustom();
 
-  const add1Global = () => {
-    const newCounterValue = globalState.counter + 1;
-    setGlobalState({ counter: newCounterValue });
-  };
+    const [globalState, globalActions] = useGlobal();
 
     return (
       <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '20%'}}>
         <Card.Header>Question #1</Card.Header>
           <Card.Body>
-            <Card.Title>Is this project ready to begin now?</Card.Title>
-              <Card.Text>
-              </Card.Text>
-            <ButtonG />
+            <Card.Title>{Object.values(questions)[0].Question}</Card.Title>
+              <div className="d-flex flex-column">
+                <ButtonGroup size="lg">
+                  <Button onClick={() => globalActions.addToCounter(1)}>Yes</Button>
+                  <Button onClick={() => globalActions.addToCounter(1)}>No</Button>
+                  <Button onClick={() => globalActions.addToCounter(1)}>Skip</Button>
+                </ButtonGroup>
+              </div>
           </Card.Body>
       </Card>
     );

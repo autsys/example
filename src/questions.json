@@ -1,14 +1,14 @@
 [
-{"Question":"Is this project ready to begin now?","Type":"bool"},
-{"Question":"Do you have a UI design?","Type":"bool"},
-{"Question":"Do you have a logo?","Type":"bool"},
-{"Question":"Do you have a color scheme?","Type":"bool"},
-{"Question":"Do you have a domail?","Type":"string"},
-{"Question":"Do you have a hosting solution? )goDadday, SquarSpace), The cloud)","Type":"bool"},
-{"Question":"Have you alreaday started programming?","Type":"bool"},
-{"Question":"Do you want 3rd party connections? (Google, Auth, forkyou)","Type":"string"},
-{"Question":"Do you have a defined software stack? (MERN, MEAN, LAMP, etc...)","Type":"array"},
-{"Question":"Does this project involve users? (People connecting/using the application)","Type":"bool"},
-{"Question":"What do you want the project to accomplish?","Type":"string"},
-{"Question":"What features do you want the website/web app to have?","Type":"string"}
+  {"Question":"Is this project ready to begin now?","Type":"bool"},
+  {"Question":"Do you have a UI design?","Type":"bool"},
+  {"Question":"Do you have a logo?","Type":"bool"},
+  {"Question":"Do you have a color scheme?","Type":"bool"},
+  {"Question":"Do you have a domail?","Type":"string"},
+  {"Question":"Do you have a hosting solution? )goDadday, SquarSpace), The cloud)","Type":"bool"},
+  {"Question":"Have you alreaday started programming?","Type":"bool"},
+  {"Question":"Do you want 3rd party connections? (Google, Auth, forkyou)","Type":"string"},
+  {"Question":"Do you have a defined software stack? (MERN, MEAN, LAMP, etc...)","Type":"array"},
+  {"Question":"Does this project involve users? (People connecting/using the application)","Type":"bool"},
+  {"Question":"What do you want the project to accomplish?","Type":"string"},
+  {"Question":"What features do you want the website/web app to have?","Type":"string"}
 ]
