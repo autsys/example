@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
-import useGlobalHook from '../hooks/globalHook'
 
 export default function Jumbo() {
   const [showComp, setShowComp] = useState(true);
