@@ -20,15 +20,18 @@ export default function Jumbo() {
             <p>
               This is a simple questionare to help us, help you! It should take no longer than 2 minutes.
             </p>
+            <p> 
+              Please provide a good contact E-mail.
+            </p>
             <InputGroup className="mb-3">
-    <InputGroup.Prepend>
-      <InputGroup.Text id="inputGroup-sizing-default">Default</InputGroup.Text>
-    </InputGroup.Prepend>
-    <FormControl
-      aria-label="Default"
-      aria-describedby="inputGroup-sizing-default"
-    />
-  </InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Text id="inputGroup-sizing-default">Email</InputGroup.Text>
+              </InputGroup.Prepend>
+              <FormControl
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </InputGroup>
           <p>
             <Button 
               onClick={() => setshowHide(false)}
