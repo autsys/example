@@ -12,7 +12,6 @@ class App extends Component {
       <Fragment>
         <Logo />
         <Jumbo />
-        <Qcard />
       </Fragment>
     );
   }

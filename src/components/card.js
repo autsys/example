@@ -22,13 +22,13 @@ const Qcard = () => {
     const [globalState, globalActions] = useGlobal();
 
     return (
-      <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '20%'}}>
+      <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '10%'}}>
         <Card.Header>Question #1</Card.Header>
           <Card.Body>
             <Card.Title>{Object.values(questions)[0].Question}</Card.Title>
               <div className="d-flex flex-column">
                 <ButtonGroup size="lg">
-                  <Button onClick={() => globalActions.addToCounter(1)}>Yes</Button>
+                  <Button type="button" onClick={() => globalActions.addToCounter(1)}>Yes</Button>
                   <Button onClick={() => globalActions.addToCounter(1)}>No</Button>
                   <Button onClick={() => globalActions.addToCounter(1)}>Skip</Button>
                 </ButtonGroup>

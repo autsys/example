@@ -1,38 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
-import globalHook from 'use-global-hook';
-import Qcard from '../components/card'
+import Qcard from '../components/card';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl'
 
-const initialState = {
-  jumbo: 'flex',
-  card: 'none',
-  index: 0
-};
-
-const actions = {
-  toggleDisplay: (store, changeDisplay) => {
-    const showHide = store.state.display;
-    store.setState({ changeDisplay: showHide });
-  }
-};
-
-const useGlobal = globalHook(React, initialState, actions);
 
 export default function Jumbo() {
-
-  const [globalState, globalActions] = useGlobal();
-
+  const [showHide, setshowHide] = useState(true);
+  if (showHide === false) {
+    return (
+      <Qcard />
+    )
+  }
     return(
-      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '5%'}}>
+      <div style={{display: showHide ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', marginTop: '5%'}}>
         <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
           <h1>Welcome!</h1>
             <p>
               This is a simple questionare to help us, help you! It should take no longer than 2 minutes.
             </p>
+            <InputGroup className="mb-3">
+    <InputGroup.Prepend>
+      <InputGroup.Text id="inputGroup-sizing-default">Default</InputGroup.Text>
+    </InputGroup.Prepend>
+    <FormControl
+      aria-label="Default"
+      aria-describedby="inputGroup-sizing-default"
+    />
+  </InputGroup>
           <p>
             <Button 
-              onClick={() => globalActions.toggleDisplay()}
+              onClick={() => setshowHide(false)}
               style={{width: 120}} 
               variant="primary">Start</Button>
           </p>

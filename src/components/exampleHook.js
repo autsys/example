@@ -14,7 +14,19 @@ const actions = {
 };
  
 const useGlobal = globalHook(React, initialState, actions);
- 
+
+
+
+
+const Qarray = Object.values(questions)
+const reformQarray = Qarray.map(obj => {
+  let rObj = {};
+  rObj[obj.Question] = obj.value;
+  return rObj;
+});
+console.log(reformQarray)
+
+
 const HookExample = () => {
   const [globalState, globalActions] = useGlobal();
   return (
