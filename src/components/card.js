@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card'
 import { Button, ButtonGroup } from 'react-bootstrap';
-
 import questions from '../questions.json'
 
 const Qcard = () => {
