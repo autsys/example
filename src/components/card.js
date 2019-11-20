@@ -6,7 +6,7 @@ import questions from '../questions.json'
 
 const Qcard = () => {
 
-    const [questions, setQuestions] = useState();
+    const [questionIndex, setQuestions] = useState();
 
     return (
       <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '10%'}}>
