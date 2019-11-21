@@ -3,14 +3,19 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 import Qcard from '../components/card';
 import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl'
+import Form from 'react-bootstrap/Form'
 
 // Or instead of email input give them a code (1234) so we know which project they are responding to 
 // (would only work if dealing in upwork)
 
 
 export default function Jumbo() {
+
   const [showHide, setshowHide] = useState(true);
+  const [emailInput, setEmailInput] = useState();
+
+  console.log(emailInput);
+
   if (showHide === false) {
     return (
       <Qcard />
@@ -26,18 +31,14 @@ export default function Jumbo() {
             <p> 
               Please provide a good contact E-mail.
             </p>
-            <InputGroup className="mb-3">
-              <InputGroup.Prepend>
-                <InputGroup.Text id="inputGroup-sizing-default">Email</InputGroup.Text>
-              </InputGroup.Prepend>
-              <FormControl
-                aria-label="Default"
-                aria-describedby="inputGroup-sizing-default"
-              />
-            </InputGroup>
+            <Form>
+              <Form.Group controlId="formGroupEmail">
+                <Form.Control type="email" value={emailInput} placeholder="Enter email" />
+              </Form.Group>
+            </Form>
           <p>
             <Button 
-              onClick={() => setshowHide(false)}
+              onClick={() => setshowHide(false) && setEmailInput}
               style={{width: 120}} 
               type="submit"
               variant="primary">Start</Button>
