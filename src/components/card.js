@@ -14,6 +14,8 @@ const Qcard = () => {
         setSteps(steps => steps + 1);
       }
 
+      // breaks after you reach the end need to set a limit
+
     return (
       <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '10%'}}>
         <Card.Header>Question #1</Card.Header>
