@@ -10,11 +10,9 @@ const Qcard = () => {
 
     const [steps, setSteps] = useState(0);
 
-
       function increment() {
         setSteps(steps => steps + 1);
       }
-
       // breaks after you reach the end need to set a limit
 
     return (
@@ -24,9 +22,9 @@ const Qcard = () => {
             <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
               <div className="d-flex flex-column">
                 <ButtonGroup size="lg">
-                  <Button type='Yes' onClick={increment}>Yes</Button>
-                  <Button type='No' onClick={increment}>No</Button>
-                  <Button type='Skip' onClick={increment}>Skip</Button>
+                  <Button value='yes' onClick={(e) => {increment(); console.log(e.target.value)}}>Yes</Button>
+                  <Button value='no' onClick={(e) => {increment(); console.log(e.target.value)}}>No</Button>
+                  <Button value='skip' onClick={(e) => {increment(); console.log(e.target.value)}}>Skip</Button>
                 </ButtonGroup>
               </div>
           </Card.Body>
