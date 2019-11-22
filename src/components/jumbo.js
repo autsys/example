@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 import Qcard from '../components/card';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form'
 
 // Or instead of email input give them a code (1234) so we know which project they are responding to 
@@ -12,9 +11,14 @@ import Form from 'react-bootstrap/Form'
 export default function Jumbo() {
 
   const [showHide, setshowHide] = useState(true);
-  const [emailInput, setEmailInput] = useState();
+  const [emailInput, setEmailInput] = useState('');
 
-  console.log(emailInput);
+  const submitValue = () => {
+    const details = {
+      'Email' : emailInput
+    }
+    console.log(details)
+  }
 
   if (showHide === false) {
     return (
@@ -33,12 +37,12 @@ export default function Jumbo() {
             </p>
             <Form>
               <Form.Group controlId="formGroupEmail">
-                <Form.Control type="email" value={emailInput} placeholder="Enter email" />
+                <Form.Control type="text" placeholder="Enter email" onChange={e => setEmailInput(e.target.value)} />
               </Form.Group>
             </Form>
           <p>
             <Button 
-              onClick={() => setshowHide(false) && setEmailInput}
+              onClick={() => setshowHide(false) && {submitValue}}
               style={{width: 120}} 
               type="submit"
               variant="primary">Start</Button>

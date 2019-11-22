@@ -12,6 +12,9 @@ const Qcard = () => {
 
       function increment() {
         setSteps(steps => steps + 1);
+        if (steps >= 12) {
+          return <Thanks />;
+        }
       }
 
       // breaks after you reach the end need to set a limit
