@@ -1,14 +1,15 @@
 import React from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 export default function Thanks() {
     return(
-      <div className="d-flex flex-column">
-        <ButtonGroup size="lg">
-          <Button>Thank</Button>
-          <Button>You</Button>
-          <Button>Come again</Button>
-        </ButtonGroup>
-     </div>
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '5%'}}>
+        <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
+          <h1>Thanks!</h1>
+            <p>
+              You should recieve an email from us ** something something
+            </p>
+        </Jumbotron>
+      </div>
     )
   }

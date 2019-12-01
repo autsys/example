@@ -11,10 +11,10 @@ const Qcard = () => {
     const [steps, setSteps] = useState(0);
 
       function increment() {
-        setSteps(steps => steps + 1);
+        setSteps(steps => steps + 1)
       }
+
       // breaks after you reach the end need to set a limit
-      //
 
     return (
       <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '10%'}}>
