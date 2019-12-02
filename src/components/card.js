@@ -5,19 +5,28 @@ import questions from '../questions.json';
 import Thanks from '../components/thanks';
 
 
-
 const Qcard = () => {
 
     const [steps, setSteps] = useState(0);
+    const [hideQuestions, setHideQuestions] = useState(true);
 
       function increment() {
         setSteps(steps => steps + 1)
+        if (steps === 10){
+          setHideQuestions(false)
+        }
+      }
+
+      if (hideQuestions === false) {
+        return (
+          <Thanks />
+        )
       }
 
       // breaks after you reach the end need to set a limit
 
     return (
-      <Card style={{marginLeft: '20%', marginRight: '20%', marginTop: '10%'}}>
+      <Card style={{display: hideQuestions ? 'flex' : 'none', marginLeft: '20%', marginRight: '20%', marginTop: '10%'}}>
         <Card.Header>Question {steps + 1}</Card.Header>
           <Card.Body>
             <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
