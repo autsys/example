@@ -7,7 +7,7 @@ export default function Thanks() {
         <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
           <h1>Thanks!</h1>
             <p>
-              You should recieve an email from us ** something something
+              You should recieve an email from us ** something something does this increase the length of component
             </p>
         </Jumbotron>
       </div>
