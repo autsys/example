@@ -4,6 +4,7 @@
   "private": true,
   "description": "Autarky showcase",
   "main": "index.js",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "yarn run build",
@@ -26,6 +27,7 @@
   "author": "Autarky Systems",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
     "react": "^16.11.0",
