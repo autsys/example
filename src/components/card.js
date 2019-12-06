@@ -42,7 +42,7 @@ const Qcard = () => {
       // breaks after you reach the end need to set a limit
 
     return (
-      <Card style={{display: hideQuestions ? 'flex' : 'none', marginLeft: '20%', marginRight: '20%', marginTop: '10%'}}>
+      <Card style={{display: hideQuestions ? 'flex' : 'none', marginLeft: '10%', marginRight: '10%', marginTop: '10%'}}>
         <Card.Header>Question {steps + 1}</Card.Header>
           <Card.Body>
             <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
