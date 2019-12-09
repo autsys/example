@@ -24,12 +24,15 @@ const Qcard = () => {
     const [steps, setSteps] = useState(0);
     const [hideQuestions, setHideQuestions] = useState(true);
 
+    const Q = Object.values(questions)[steps].Question
+
       function increment(ans) {
-        answers.push(ans)
+        answers.push({Q, ans})
         console.log('answer', ans)
         setSteps(steps => steps + 1)
         if (steps === 10){
           setHideQuestions(false)
+          aPost()
         }
       }
 
@@ -38,7 +41,6 @@ const Qcard = () => {
           <Thanks />
         )
       }
-
       // breaks after you reach the end need to set a limit
 
     return (
