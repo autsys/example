@@ -13,13 +13,9 @@ exports.submit = functions.https.onRequest( async (request, response) => {
     cors()(request, response, () => {
       response.send("Thank you for the submission.");
     });
+    
     let docRef = db.collection('users').doc('alovelace');
-
-    let setAda = docRef.set({
-      first: 'Ada',
-      last: 'Lovelace',
-      born: 1815
-    });
+    let setAda = docRef.set(json);
   }
   catch(err){
     console.error(err)
@@ -31,14 +27,11 @@ exports.data = functions.https.onRequest( async (request, response) => {
   try {
     let collection = await db.collection('users')
     const snapshot = await collection.get()
-    console.log('snapshot', JSON.stringify(snapshot))
     let result = []
     snapshot.forEach( doc => {
       const d = doc.data()
-      console.log('d', d)
       result.push(d)
     })
-    console.log('result', result)
     response.send(result)
   }
   catch(err){

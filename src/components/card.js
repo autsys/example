@@ -7,16 +7,15 @@ import axios from 'axios';
 
 const answers = []
 
-function aPost() {
-  axios.post('http://localhost:5000/autarky-systems/us-central1/submit', {
-    answers
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+async function aPost() {
+  try {
+    axios.post('http://localhost:5001/autarky-systems/us-central1/submit', {
+      answers
+    })
+  }
+  catch(err){
+    console.error(err)
+  }
 }
 
 const Qcard = () => {
@@ -48,12 +47,10 @@ const Qcard = () => {
         <Card.Header>Question {steps + 1}</Card.Header>
           <Card.Body>
             <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
-              <div className="d-flex flex-column">
-                <ButtonGroup size="lg">
-                  <Button value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
-                  <Button value='no' onClick={(e) => {increment('no');}}>No</Button>
-                  <Button value='skip' onClick={(e) => {increment('skip');}}>Skip</Button>
-                </ButtonGroup>
+              <div className="d-flex flex-row">
+                  <Button style={{margin: 7, width: 100}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
+                  <Button style={{margin: 7, width: 100}} value='no' onClick={(e) => {increment('no');}}>No</Button>
+                  <Button style={{margin: 7, width: 100}} value='skip' onClick={(e) => {increment('skip');}}>Skip</Button>
               </div>
           </Card.Body>
       </Card>

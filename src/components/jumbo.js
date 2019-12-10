@@ -32,7 +32,7 @@ export default function Jumbo() {
             <p>
               This is a simple questionare to help us, help you! It should take no longer than 2 minutes.
             </p>
-          <p>
+          <p style={{paddingTop: 30}}>
             <Button 
               onClick={() => setshowHide(false) && {submitValue}}
               style={{width: 120}} 
