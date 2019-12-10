@@ -47,7 +47,7 @@ const Qcard = () => {
         <Card.Header>Question {steps + 1}</Card.Header>
           <Card.Body>
             <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
-              <div className="d-flex flex-row">
+              <div className="d-flex flex-row" style={{alignContent: 'center', justifyContent: 'center'}}>
                   <Button style={{margin: 7, width: 100}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
                   <Button style={{margin: 7, width: 100}} value='no' onClick={(e) => {increment('no');}}>No</Button>
                   <Button style={{margin: 7, width: 100}} value='skip' onClick={(e) => {increment('skip');}}>Skip</Button>

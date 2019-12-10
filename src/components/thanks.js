@@ -3,7 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 
 export default function Thanks() {
     return(
-      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '5%'}}>
+      <div class="jumbo" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '10%'}}>
         <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
           <h1>Thanks!</h1>
             <p>

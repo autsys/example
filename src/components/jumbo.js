@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 import Qcard from '../components/card';
-import Form from 'react-bootstrap/Form'
 
 // Or instead of email input give them a code (1234) so we know which project they are responding to 
 // (would only work if dealing in upwork)
@@ -26,7 +25,7 @@ export default function Jumbo() {
     )
   }
     return(
-      <div style={{display: showHide ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', marginTop: '5%'}}>
+      <div class="jumbo" style={{display: showHide ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', marginTop: '10%'}}>
         <Jumbotron style={{color: 'white', backgroundColor: '#333333'}}>
           <h1>Welcome!</h1>
             <p>
