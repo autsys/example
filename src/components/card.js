@@ -43,17 +43,19 @@ const Qcard = () => {
       // breaks after you reach the end need to set a limit
 
     return (
-      <Card style={{display: hideQuestions ? 'flex' : 'none', marginLeft: '10%', marginRight: '10%', marginTop: '10%'}}>
-        <Card.Header>Question {steps + 1}</Card.Header>
-          <Card.Body>
-            <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
-              <div className="d-flex flex-row" style={{alignContent: 'center', justifyContent: 'center'}}>
-                  <Button style={{margin: 7, width: 100}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
-                  <Button style={{margin: 7, width: 100}} value='no' onClick={(e) => {increment('no');}}>No</Button>
-                  <Button style={{margin: 7, width: 100}} value='skip' onClick={(e) => {increment('skip');}}>Skip</Button>
-              </div>
-          </Card.Body>
-      </Card>
+      <div class="cardDown">
+        <Card style={{display: hideQuestions ? 'flex' : 'none', marginLeft: '10%', marginRight: '10%', marginTop: '10%', boxShadow: '5px 5px 30px black', border: 'none'}}>
+          <Card.Header style={{backgroundColor: '#555555', color: 'white'}}>Question {steps + 1}</Card.Header>
+            <Card.Body style={{backgroundColor: '#333333', color: 'white'}}>
+              <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
+                <div className="d-flex flex-row" style={{alignContent: 'center', justifyContent: 'center'}}>
+                    <Button style={{margin: 7, width: 110}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
+                    <Button style={{margin: 7, width: 110}} value='no' onClick={(e) => {increment('no');}}>No</Button>
+                    <button class="skipButton" style={{margin: 7, width: 110, color: '#3c76fd'}} value='skip' onClick={(e) => {increment('skip');}}>Skip</button>
+                </div>
+            </Card.Body>
+        </Card>
+      </div>
     );
   }
 export default Qcard
