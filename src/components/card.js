@@ -44,7 +44,7 @@ const Qcard = () => {
 
     return (
       <div class="cardDown">
-        <Card style={{display: hideQuestions ? 'flex' : 'none', marginLeft: '10%', marginRight: '10%', marginTop: '10%', boxShadow: '5px 5px 30px black', border: 'none'}}>
+        <Card style={{display: hideQuestions ? 'flex' : 'none', marginLeft: '10%', marginRight: '10%', marginTop: '10%', boxShadow: '3px 3px 10px black', border: 'none'}}>
           <Card.Header style={{backgroundColor: '#555555', color: 'white'}}>Question {steps + 1}</Card.Header>
             <Card.Body style={{backgroundColor: '#333333', color: 'white'}}>
               <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
