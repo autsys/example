@@ -27,7 +27,6 @@ const Qcard = () => {
 
       function increment(ans) {
         answers.push({Q, ans})
-        console.log('answer', ans)
         setSteps(steps => steps + 1)
         if (steps === 10){
           setHideQuestions(false)
@@ -43,14 +42,16 @@ const Qcard = () => {
       // breaks after you reach the end need to set a limit
 
     return (
-      <Card style={{display: hideQuestions ? 'flex' : 'none', marginLeft: '10%', marginRight: '10%', marginTop: '10%'}}>
+      <Card style={{'text-align': 'center', display: hideQuestions ? 'flex' : 'none', marginLeft: '10%', marginRight: '10%', marginTop: '10%'}}>
         <Card.Header>Question {steps + 1}</Card.Header>
           <Card.Body>
             <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
-              <div className="d-flex flex-row" style={{alignContent: 'center', justifyContent: 'center'}}>
-                  <Button style={{margin: 7, width: 100}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
-                  <Button style={{margin: 7, width: 100}} value='no' onClick={(e) => {increment('no');}}>No</Button>
-                  <Button style={{margin: 7, width: 100}} value='skip' onClick={(e) => {increment('skip');}}>Skip</Button>
+              <div className="container">
+                <div className="row justify-content-between" role="group" aria-label="Choose skip no or yes">
+                    <Button variant="light" value='skip' className="col button" onClick={(e) => {increment('skip');}}>Skip</Button>
+                    <Button variant="secondary" value='no' className="col button" onClick={(e) => {increment('no');}}>No</Button>
+                    <Button variant="primary" value='yes' className="col button" onClick={(e) => {increment('yes');}}>Yes</Button>
+                </div>
               </div>
           </Card.Body>
       </Card>
