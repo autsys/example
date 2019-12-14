@@ -23,16 +23,18 @@ const Qcard = () => {
     const [steps, setSteps] = useState(0);
     const [hideQuestions, setHideQuestions] = useState(true);
 
+    if (steps === questions.length){
+      setHideQuestions(false)
+      aPost()
+      return
+    }
+
     const Q = Object.values(questions)[steps].Question
 
       function increment(ans) {
         answers.push({Q, ans})
         console.log('answer', ans)
         setSteps(steps => steps + 1)
-        if (steps === 10){
-          setHideQuestions(false)
-          aPost()
-        }
       }
 
       if (hideQuestions === false) {
@@ -49,9 +51,9 @@ const Qcard = () => {
             <Card.Body style={{backgroundColor: '#333333', color: 'white'}}>
               <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
                 <div className="d-flex flex-row" style={{alignContent: 'center', justifyContent: 'center'}}>
-                  <Button style={{margin: 7, width: 110}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
-                  <Button style={{margin: 7, width: 110}} value='no' onClick={(e) => {increment('no');}}>No</Button>
                   <button class="skipButton" style={{margin: 7, width: 110, color: '#3c76fd'}} value='skip' onClick={(e) => {increment('skip');}}>Skip</button>
+                  <Button style={{margin: 7, width: 110}} value='no' onClick={(e) => {increment('no');}}>No</Button>
+                  <Button style={{margin: 7, width: 110}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
                 </div>
             </Card.Body>
         </Card>
