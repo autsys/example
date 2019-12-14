@@ -40,7 +40,7 @@ const Qcard = () => {
           <Thanks />
         )
       }
-      // breaks after you reach the end need to set a limit
+      // breaks after you reach the end needed to set a limit
 
     return (
       <div class="cardDown">
@@ -49,9 +49,9 @@ const Qcard = () => {
             <Card.Body style={{backgroundColor: '#333333', color: 'white'}}>
               <Card.Title>{Object.values(questions)[steps].Question}</Card.Title>
                 <div className="d-flex flex-row" style={{alignContent: 'center', justifyContent: 'center'}}>
-                    <Button style={{margin: 7, width: 110}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
-                    <Button style={{margin: 7, width: 110}} value='no' onClick={(e) => {increment('no');}}>No</Button>
-                    <button class="skipButton" style={{margin: 7, width: 110, color: '#3c76fd'}} value='skip' onClick={(e) => {increment('skip');}}>Skip</button>
+                  <Button style={{margin: 7, width: 110}} value='yes' onClick={(e) => {increment('yes');}}>Yes</Button>
+                  <Button style={{margin: 7, width: 110}} value='no' onClick={(e) => {increment('no');}}>No</Button>
+                  <button class="skipButton" style={{margin: 7, width: 110, color: '#3c76fd'}} value='skip' onClick={(e) => {increment('skip');}}>Skip</button>
                 </div>
             </Card.Body>
         </Card>
