@@ -23,18 +23,18 @@ const Qcard = () => {
     const [steps, setSteps] = useState(0);
     const [hideQuestions, setHideQuestions] = useState(true);
 
-    if (steps === questions.length){
-      setHideQuestions(false)
-      aPost()
-      return
-    }
-
-    const Q = Object.values(questions)[steps].Question
+    const arrayLength = questions.length - 1
 
       function increment(ans) {
+        const Q = Object.values(questions)[steps].Question
         answers.push({Q, ans})
         console.log('answer', ans)
         setSteps(steps => steps + 1)
+          if (steps === arrayLength){
+            setHideQuestions(false)
+            aPost()
+            return
+          }
       }
 
       if (hideQuestions === false) {
