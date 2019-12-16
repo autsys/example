@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Admin />
+        <Jumbo />
       </Fragment>
     );
   }
