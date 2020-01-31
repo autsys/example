@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
 export default function Admin() {
@@ -17,7 +15,7 @@ export default function Admin() {
     console.log('id', id)
     //read the job id from the pasted in link
     //https://www.upwork.com/jobs/~019e1d7df4efe2faf6
-    const ele = document.getElementById('gen') 
+    const ele = document.getElementById('gen')
     ele.innerHTML = `
       <p>${id}</p>
       <p>questions go here</p>
